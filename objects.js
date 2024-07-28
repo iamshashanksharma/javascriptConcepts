@@ -36,4 +36,37 @@ let fruits = {
  console.log("name" in vegetables);
  console.log("quality" in vegetables);
 
- 
+ // for in loop
+
+ let user2 = {
+    name : "john",
+    age : 30,
+    isAdmin : true,
+
+ }
+
+ for(let key in user2)
+    {
+        console.log(key);
+        console.log(user2[key]);
+    }
+
+  // multiply numeric properties by 2 
+  
+  let menu = {
+    width : 200,
+    height : 300,
+    title : "My menu",
+  };
+
+  function multiplyNumeric(menu){
+    for(let key in menu)
+        {
+            if(typeof menu[key] == "number"){
+                menu[key] = menu[key] *2;
+            }
+        }
+     console.log(menu);
+    }
+
+   multiplyNumeric(menu); 
